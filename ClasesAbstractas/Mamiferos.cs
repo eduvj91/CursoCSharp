@@ -6,20 +6,29 @@ namespace ClasesAbstractas
 {
     class Mamiferos : Animales
     {
-        public override void GetNombre()
-        {
-            throw new NotImplementedException();
-        }
+        // Campos de clase encapsuladas
+        string nombreMamifero;
 
 
         // Constructor
         public Mamiferos(string nombre)
         {
-            this.nombre = nombre;
+            this.nombreMamifero = nombre;
         }
 
 
-        // Campos de clase encapsuladas
-        string nombre;
+        public override void GetNombre()
+        {
+            Console.WriteLine("El nombre del mamífero es: " + nombreMamifero);
+        }
+
+        public virtual void Pensar()
+        {
+            Console.WriteLine("El pensamiento instintivo");
+        }
+
+
+
+
     }
 }
