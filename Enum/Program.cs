@@ -23,6 +23,8 @@ namespace Enum
             double salarioAntonio = (double)antonio;
             Console.WriteLine(salarioAntonio);
 
+            Empleado juan = new Empleado(Bonus.Invierno, 3000);
+            Console.WriteLine("El salario del empelado es: " + juan.SALARIO);
         }
     }
 
@@ -31,6 +33,9 @@ namespace Enum
         private double salario, bonus;
 
         public double SALARIO
+        {
+            get => salario + bonus;
+        }
 
         public Empleado(Bonus bonusEmpleado, double salario)
         {
